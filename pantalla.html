@@ -17,32 +17,24 @@
 
 							<!-- Header -->
 								<header id="header">
-									<a href="index.html" class="logo"><strong>Python</strong> Tutorial</a>
+									<a href="index.html" class="logo"><strong>Pygame</strong> Tutorial</a>
 								</header>
 
 							<!-- Content -->
 								<section>
 									<header class="major">
-										<h1>Estructura Básica</h1>
+										<h1>Pantalla</h1>
 									</header>
-									<h3>Librerías</h3>
-                  <p> Para poder usar pygame debemos de importar la librería en nuestro código. Además, tenemos que importar las librerías de sys y random </p>
-									<ul>
-										<li><b>Pygame:</b> Librería utilizada para desarrollar videojuegos en python. </li>
-										<li><b>Sys:</b> Librería utilazada para realizar funciones a nivel del sistema.</li>
-									</ul>
-
-									<h3>Funciones básicas</h3>
+									<h3>Funciones para la pantalla/ventana</h3>
 
 									<ul>
-										<li><b>pygame.init()</b>: Inicializa el módulo de pygame.</li>
-										<li><b>Bucle principal</b>: Un bucle principal while que ejecute nuestro juego siempre que la condición True se cumpla. </li>
-										<li><b>Bucle for para eventos</b>: Este bucle será for y tendrá la función de recoger eventos, for event in pygame.event.get():</li>
-										<li><b>Condición QUIT</b>: Para poder salirnos del juego tendremos que crear una condición dentro de nuestros bucles anteriormente mencionados, tendrá la siguiente sintáxis: if event.type == pygame.QUIT: </li>
-										<li><b>pygame.quit()</b>: Como su nombre indica, cerramos la librería de pygame.</li>
-
-
+										<li><b>Defnir pantalla:</b> Para poder iniciar nuestra pantalla debemos definirla. pantalla = pygame.display.set_mode((alto, ancho))</li>
+										<li><b>Nombre de la ventana:</b> Se nombra la ventana con la función: pygame.display.set_caption('Nombre')</li>
+										<li><b>Actualizar pantalla: </b> Se actualiza la pantalla con la función: pygame.display.update() </li>
+										<li><b>Establecemos variable FPS:</b> Para poder establcer los fotogramas por segundo a nuestro juego declaramos una variable que contenga: pygame.time.Clock()</li>
+										<li><b>Número de FPS:</b> Para poder ajustar los fps llamamos a la función clock.tick(número)</li>
 									</ul>
+                 
 
 									
 									</span>
