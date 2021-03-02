@@ -23,18 +23,28 @@
 							<!-- Content -->
 								<section>
 									<header class="major">
-										<h1>Pantalla</h1>
+										<h1>Figurass</h1>
 									</header>
-									<h3>Funciones para la pantalla/ventana</h3>
-									<p> Este módulo ofrece control sobre la visualización de pygame. Pygame contiene una sola superficie de visualización que puede estar contenida en una ventana o bien correr en pantalla completa. Una vez que cree la pantalla de visualización podrá tratarla como una superficie normal. Los cambios no se verán inmediatamente en pantalla, deberá elegir una de las dos funciones para actualizar la pantalla.
+									<h3>Funciones para dibujar figuras</h3>
 
-El punto de origen de la pantalla es x=0 e y=0, este punto representa la esquina superior izquierda de la pantalla. Ambos ejes aumentan en dirección a la esquina inferior derecha de la pantalla. </p>
+									<p> El módulo pygame.draw  dibuja varias figuras simples a una superficie. Estas funciones servirán para pintar en cualquier formato de superficie. Aunque dibujar en superficies almacenadas en Hardware será mas lento que en superficies de Software.
+
+La mayoría de las funciones admiten un argumento width para representar el tamaño de la linea alrededor del borde de la figura. Si se pasa el parámetro width con valor 0, la función pintará la figura entera como sólida.
+
+Todas las funciones de dibujo respetan el área de recorte para la superficies, y se limitará a esa área. Las funciones retornan un rectángulo representando el área límite de los pixels modificados.
+
+La mayoría de las funciones aceptan un argumento color, que es una terna o tupla RGB. Incluso aceptan una tupla de 4 elementos para RGBA. El valor alpha (o componente de transparencia) se dibujará directamente en la superficie si ésta contiene la propiedad de transparencia de pixels, aunque la función de dibujo no dibujará de forma transparente. El argumento color también puede ser un valor de pixel entero que ya esté convertido al formato de pixel de la imagen.
+
+Estas funciones bloquearan temporalmente la superficie donde están operante. Así que muchas llamadas de dibujo se pueden acelerar bloqueando y desbloqueando la superficie donde se trabaja antes y después de llamar a las funciones de dibujo.  </p>
+
 									<ul>
-										<li><b>Definir pantalla:</b> Para poder iniciar nuestra pantalla debemos definirla. pantalla = pygame.display.set_mode((alto, ancho))</li>
-										<li><b>Nombre de la ventana:</b> Se nombra la ventana con la función: pygame.display.set_caption('Nombre')</li>
-										<li><b>Actualizar pantalla: </b> Se actualiza la pantalla con la función: pygame.display.update() </li>
-										<li><b>Establecemos variable FPS:</b> Para poder establcer los fotogramas por segundo a nuestro juego declaramos una variable que contenga: pygame.time.Clock()</li>
-										<li><b>Número de FPS:</b> Para poder ajustar los fps llamamos a la función clock.tick(número)</li>
+										<li><b>Rect</b> pygame.draw.rect(Surface, color, Rect, width=0</li>
+										<li><b>Polygon:</b> pygame.draw.polygon(Surface, color, pointlist, width=0) </li>
+										<li><b>Circle:</b> pygame.draw.circle(Surface, color, pos, radius, width=0)</li>
+										<li><b>Ellipse:</b> pygame.draw.ellipse(Surface, color, Rect, width=0)</li>
+										<li><b>Arc:</b> pygame.draw.arc(Surface, color, Rect, start_angle, stop_angle, width=1)</li>
+										<li><b>Line:</b> pygame.draw.line(Surface, color, start_pos, end_pos, width=1): return Rect</li>
+
 									</ul>
                  
 

@@ -23,20 +23,18 @@
 							<!-- Content -->
 								<section>
 									<header class="major">
-										<h1>Pantalla</h1>
+										<h1>Teclado</h1>
 									</header>
-									<h3>Funciones para la pantalla/ventana</h3>
-									<p> Este módulo ofrece control sobre la visualización de pygame. Pygame contiene una sola superficie de visualización que puede estar contenida en una ventana o bien correr en pantalla completa. Una vez que cree la pantalla de visualización podrá tratarla como una superficie normal. Los cambios no se verán inmediatamente en pantalla, deberá elegir una de las dos funciones para actualizar la pantalla.
+									<h3>Funciones de detección de teclado</h3>
 
-El punto de origen de la pantalla es x=0 e y=0, este punto representa la esquina superior izquierda de la pantalla. Ambos ejes aumentan en dirección a la esquina inferior derecha de la pantalla. </p>
-									<ul>
-										<li><b>Definir pantalla:</b> Para poder iniciar nuestra pantalla debemos definirla. pantalla = pygame.display.set_mode((alto, ancho))</li>
-										<li><b>Nombre de la ventana:</b> Se nombra la ventana con la función: pygame.display.set_caption('Nombre')</li>
-										<li><b>Actualizar pantalla: </b> Se actualiza la pantalla con la función: pygame.display.update() </li>
-										<li><b>Establecemos variable FPS:</b> Para poder establcer los fotogramas por segundo a nuestro juego declaramos una variable que contenga: pygame.time.Clock()</li>
-										<li><b>Número de FPS:</b> Para poder ajustar los fps llamamos a la función clock.tick(número)</li>
-									</ul>
-                 
+									<p> La cola de eventos obtiene eventos como pygame.KEYDOWN y pygame.KEYUP cuando se pulsan o sueltan las teclas del teclado respectivamente. Cada evento tiene una atributo llamado key que es un identificador en entero que representa cada tecla del teclado.
+
+El evento pygame.KEYDOWN tiene un atributo adicional llamado unicode, y otro scancode. unicode representa un único caracter que es la traducción completa del caracter ingresado por teclado. Teniendo en cuenta las teclas de composición y mayúsculas. scancode representa el código de tecla específico de la plataforma. Este código podría ser diferente de un teclado a otro, aunque es útil para la selección de teclas raras como las teclas multimedia. </p>
+
+<p>Primero iniciamos un bucle for que itinere la función pygame.event.get(). Dentro de este, creamos un condicional event.type == pygame.KEYDOWN. A su vez, dentro de este condicional creamos otro event.key == pygame.K_W. Dentro de este ya podemos ejecutar lo que queramos cuando la tecla sea pulsada.</p>
+
+
+
 
 									
 									</span>

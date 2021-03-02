@@ -23,18 +23,19 @@
 							<!-- Content -->
 								<section>
 									<header class="major">
-										<h1>Pantalla</h1>
+										<h1>Imagenes</h1>
 									</header>
-									<h3>Funciones para la pantalla/ventana</h3>
-									<p> Este módulo ofrece control sobre la visualización de pygame. Pygame contiene una sola superficie de visualización que puede estar contenida en una ventana o bien correr en pantalla completa. Una vez que cree la pantalla de visualización podrá tratarla como una superficie normal. Los cambios no se verán inmediatamente en pantalla, deberá elegir una de las dos funciones para actualizar la pantalla.
+									<h3>Funciones para las imagenes</h3>
 
-El punto de origen de la pantalla es x=0 e y=0, este punto representa la esquina superior izquierda de la pantalla. Ambos ejes aumentan en dirección a la esquina inferior derecha de la pantalla. </p>
+									<p>  El módulo image contiene funciones para leer y grabar imágenes, como así también para transferir superficies a formatos accesibles para otros paquetes.
+
+Note que no hay una clase Image, una imagen se carga como un objeto Surface. La clase Surface permite operaciones como dibujar lineas, pintar pixeles, capturar regiones, etc.
+
+El módulo image es una dependencia importante de pygame, aunque el soporte extendido a formatos es opcional. Por defecto solo puede cargar imágenes BMP sin compresión; pero con pygame se provee un soporte de imágenes completo. Se pueden cargar los siguiente formatos: JPG, PNG, GIF (sin animación), BMP, PCX, TGA, TIF, LBM, PBM, XPM. </p>
+
 									<ul>
-										<li><b>Definir pantalla:</b> Para poder iniciar nuestra pantalla debemos definirla. pantalla = pygame.display.set_mode((alto, ancho))</li>
-										<li><b>Nombre de la ventana:</b> Se nombra la ventana con la función: pygame.display.set_caption('Nombre')</li>
-										<li><b>Actualizar pantalla: </b> Se actualiza la pantalla con la función: pygame.display.update() </li>
-										<li><b>Establecemos variable FPS:</b> Para poder establcer los fotogramas por segundo a nuestro juego declaramos una variable que contenga: pygame.time.Clock()</li>
-										<li><b>Número de FPS:</b> Para poder ajustar los fps llamamos a la función clock.tick(número)</li>
+										<li><b>Cargar Imagen:</b> Para poder cargar la imagen usaremos: imagen = pygame.load("ruta_imagen")</li>
+										<li><b>Mostrar Imagen:</b> Se muestra la imagen: pantalla.blit(imagen(posx, posy))</li>
 									</ul>
                  
 
