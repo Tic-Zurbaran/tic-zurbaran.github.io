@@ -23,27 +23,27 @@
 							<!-- Content -->
 								<section>
 									<header class="major">
-										<h1>Figurass</h1>
+										<h1>Figuras</h1>
 									</header>
 									<h3>Funciones para dibujar figuras</h3>
 
-									<p> El módulo pygame.draw  dibuja varias figuras simples a una superficie. Estas funciones servirán para pintar en cualquier formato de superficie. Aunque dibujar en superficies almacenadas en Hardware será mas lento que en superficies de Software.
+									<p> El módulo pygame.draw  dibuja varias figuras simples a una superficie. Estas funciones servirán para pintar en cualquier formato de superficie. Aunque dibujar en superficies almacenadas en Hardware será mas lento que en superficies de Software.</p>
 
-La mayoría de las funciones admiten un argumento width para representar el tamaño de la linea alrededor del borde de la figura. Si se pasa el parámetro width con valor 0, la función pintará la figura entera como sólida.
+<p>La mayoría de las funciones admiten un argumento width para representar el tamaño de la linea alrededor del borde de la figura. Si se pasa el parámetro width con valor 0, la función pintará la figura entera como sólida.
 
-Todas las funciones de dibujo respetan el área de recorte para la superficies, y se limitará a esa área. Las funciones retornan un rectángulo representando el área límite de los pixels modificados.
+Todas las funciones de dibujo respetan el área de recorte para la superficies, y se limitará a esa área. Las funciones retornan un rectángulo representando el área límite de los pixels modificados.</p>
 
-La mayoría de las funciones aceptan un argumento color, que es una terna o tupla RGB. Incluso aceptan una tupla de 4 elementos para RGBA. El valor alpha (o componente de transparencia) se dibujará directamente en la superficie si ésta contiene la propiedad de transparencia de pixels, aunque la función de dibujo no dibujará de forma transparente. El argumento color también puede ser un valor de pixel entero que ya esté convertido al formato de pixel de la imagen.
+<p>La mayoría de las funciones aceptan un argumento color, que es una terna o tupla RGB. Incluso aceptan una tupla de 4 elementos para RGBA. El valor alpha (o componente de transparencia) se dibujará directamente en la superficie si ésta contiene la propiedad de transparencia de pixels, aunque la función de dibujo no dibujará de forma transparente. El argumento color también puede ser un valor de pixel entero que ya esté convertido al formato de pixel de la imagen.</p>
 
-Estas funciones bloquearan temporalmente la superficie donde están operante. Así que muchas llamadas de dibujo se pueden acelerar bloqueando y desbloqueando la superficie donde se trabaja antes y después de llamar a las funciones de dibujo.  </p>
+<p>Estas funciones bloquearan temporalmente la superficie donde están operante. Así que muchas llamadas de dibujo se pueden acelerar bloqueando y desbloqueando la superficie donde se trabaja antes y después de llamar a las funciones de dibujo.  </p>
 
 									<ul>
-										<li><b>Rect</b> pygame.draw.rect(Surface, color, Rect, width=0</li>
+										<li><b>Rect</b> pygame.draw.rect(Surface, color, Rect, width=0)</li>
 										<li><b>Polygon:</b> pygame.draw.polygon(Surface, color, pointlist, width=0) </li>
 										<li><b>Circle:</b> pygame.draw.circle(Surface, color, pos, radius, width=0)</li>
 										<li><b>Ellipse:</b> pygame.draw.ellipse(Surface, color, Rect, width=0)</li>
 										<li><b>Arc:</b> pygame.draw.arc(Surface, color, Rect, start_angle, stop_angle, width=1)</li>
-										<li><b>Line:</b> pygame.draw.line(Surface, color, start_pos, end_pos, width=1): return Rect</li>
+										<li><b>Line:</b> pygame.draw.line(Surface, color, start_pos, end_pos, width=1)</li>
 
 									</ul>
                  
